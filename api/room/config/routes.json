@@ -1,0 +1,20 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/rooms/:unique_id",
+      "handler": "room.findOneByUniqueId",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/rooms",
+      "handler": "room.create",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

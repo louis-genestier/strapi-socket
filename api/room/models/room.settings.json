@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rooms",
+  "info": {
+    "name": "Room"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "unique_id": {
+      "type": "uid",
+      "private": false
+    },
+    "active": {
+      "type": "boolean",
+      "default": true
+    },
+    "users": {
+      "via": "room",
+      "plugin": "users-permissions",
+      "collection": "user"
+    }
+  }
+}
